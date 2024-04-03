@@ -1,0 +1,17 @@
+{
+  "hash": "4e4ebe5e73a8880db90588edbb2eae7e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Segundo projeto\"\nauthor: \"Rafael Belokurows\"\ndate: \"2024-03-30\"\ncategories: [plot, code, analysis]\nimage: \"image.jpg\"\ndescription: \"Teste de descrição\"\n---\n\n\nThis is a post with executable code.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(mtcars$mpg)\n```\n\n::: {.cell-output-display}\n![](index_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Rafael Belokurows"
+  navbar:
+    left:
+      - text: Home
+        icon: house-door-fill
+        href: index.qmd
+      - text: Projects
+        icon: card-checklist
+        href: projects.qmd
+      - text: Resume
+        icon: file-earmark-person
+        href: resume.qmd
+      - text: Blog
+        href: blog.qmd
+        icon: pen-fill
+      - text: Data Viz
+        href: data-viz.qmd
+        icon: graph-up-arrow
+    right:
+    #  - about.qmd
+      - icon: github
+        href: https://github.com/rafabelokurows
+      - icon: linkedin
+        href: https://www.linkedin.com/in/rafabelo
+  search:
+    location: navbar
+    type: overlay
+  page-footer:
+    center: |
+     [Rafael Belokurows](mailto:rafabelokurows@gmail.com)
+    left: |
+     Made with [Quarto](https://quarto.org/)
+    right: |
+     [Github](https://www.github.com/rafabelokurows/)
+    background: "#375a7f"
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css
+    code-link: true
+    code-fold: show
+    code-tools: false
+    highlight-style: github
+    citations-hover: true
+    toc: true
+
+
+editor: visual
+

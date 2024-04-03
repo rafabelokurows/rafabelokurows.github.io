@@ -1,0 +1,15 @@
+---
+title: "About me"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/rafabelo
+    - icon: github
+      text: Github
+      href: https://github.com/rafabelokurows
+---
+
+Welcome to my home page, I'm a Data Science/Analytics specialist with more than a decade of work in many IT domains.

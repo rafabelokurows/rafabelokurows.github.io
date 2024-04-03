@@ -1,0 +1,14 @@
+---
+title: "Segundo projeto"
+author: "Rafael Belokurows"
+date: "2024-03-30"
+categories: [plot, code, analysis]
+image: "image.jpg"
+description: "Teste de descrição"
+---
+
+This is a post with executable code.
+
+```{r}
+plot(mtcars$mpg)
+```

@@ -1,0 +1,49 @@
+---
+title: "Data Visualizations"
+title-block-banner: true
+page-layout: full
+freeze: false
+lightbox: auto
+echo: false
+---
+
+<!-- | | | | -->
+<!-- |:-------------------------:|:-------------------------:|:-------------------------:| -->
+<!-- |<img width="300" alt="teste" src="https://github.com/rafabelokurows/rafabelokurows.github.io/blob/master/assets/map_flights_br_2.gif?raw=true"> |  <img width="300" alt="teste 2" src="https://github.com/rafabelokurows/rafabelokurows.github.io/blob/master/assets/images/flourish-most-olympic-medals.png?raw=true">|<img width="300" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://github.com/rafabelokurows/rafabelokurows.github.io/blob/master/assets/images/us-vaccination-progress.png?raw=true">| -->
+<!-- |<img width="300" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  |  <img width="300" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="300" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">| -->
+<!-- |<img width="300" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">  |  <img width="300" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="300" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">| -->
+
+
+<div style="overflow: hidden;">
+<figure style="width: 50%; float: left; text-align: center;">
+    <img src="images/time_series_explorer.png" style="width: 100%;" />
+    <figcaption>Time Series Anomaly Detection</figcaption>
+  </figure>
+  <figure style="width: 50%; float: left; text-align: center;">
+    <img src="images/forecast_prophet.png" style="width: 100%;" />
+    <figcaption>Prophet Forecast</figcaption>
+  </figure>
+  <figure style="width: 50%; float: left; text-align: center;">
+    <img src="https://github.com/rafabelokurows/tuga-inflation-animation/blob/main/animation2.gif?raw=true" style="width: 100%;" />
+    <figcaption>Inflation animation</figcaption>
+  </figure>
+  <figure style="width: 50%; float: left; text-align: center;">
+    <img src="https://raw.githubusercontent.com/rafabelokurows/rafabelokurows/main/images/top%205%20airlines.jpg" style="width: 100%;" />
+    <figcaption>Top European Airlines</figcaption>
+  </figure>
+  <figure style="width: 50%; float: left; text-align: center;">
+    <img src="https://raw.githubusercontent.com/rafabelokurows/rafabelokurows/main/images/gender%20pay%20gap%20europe.jpg" style="width: 100%;" />
+    <figcaption>Gender pay gap in Eruopean countries</figcaption>
+  </figure>
+  <figure style="width: 50%; float: left; text-align: center;">
+    <img src="https://raw.githubusercontent.com/rafabelokurows/inflation-comparison/main/map2.png" style="width: 100%;" />
+    <figcaption>Inflation comparison 2022 x 2023</figcaption>
+  </figure>
+  
+  
+  <!-- <img src="images/time_series_explorer.png" style="width: 50%; float: left;"  /> -->
+  <!-- <img src="images/time_series_explorer.png" style="width: 50%; float: left;" />  -->
+  <!-- <img src="images/forecast_prophet.png" style="width: 50%; float: left;" /> -->
+</div>
+
+

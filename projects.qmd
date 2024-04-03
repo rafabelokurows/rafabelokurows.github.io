@@ -1,0 +1,66 @@
+
+<!-- --- -->
+<!-- title: "Projects" -->
+<!-- listing: -->
+<!--   contents: projects -->
+<!--   sort: "date desc" -->
+<!--   type: grid -->
+<!--   categories: true -->
+<!--   sort-ui: false -->
+<!--   filter-ui: false -->
+<!-- page-layout: full -->
+<!-- title-block-banner: true -->
+<!-- --- -->
+
+## Time Series Explorer Web App
+
+::: columns
+::: {.column width="55%"}
+Streamlit app that allows the user to load their own time series CSV file and that gives a quick overview of time series features, perform statistical checks and produce short-term forecasts [Check out the web app](https://egcvjidpswxzp7p3ictpax.streamlit.app/){target="_blank"}
+
+Made with: Python, Streamlit, Prophet, and several time series analysis libraries
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="43%"}
+![](images/forecast_prophet.png)
+:::
+:::
+
+
+## Porto Street Names Gender Gap
+
+::: columns
+::: {.column width="48%"}
+![](images/porto_street_names.png)
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="50%"}
+Most cities have a long-standing gender bias towards men when naming streets, squares, gardens, and other public places. While there is a somewhat recent trend to include more women when defining city names, most street names are well-established and hard to change. With this in mind, I analyzed how bad is the gender bias where I live: Porto, Portugal. [Check out how](https://github.com/rafabelokurows/porto-street-gender-bias){target="_blank"}
+
+Made with: 
+R, leaflet, openstreetmaps data
+:::
+:::
+
+## Flight Explorer
+
+::: columns
+::: {.column width="55%"}
+Automated data pipeline that collects daily prices on plane tickets and send e-mail alerts whenever price drops below certain threshold in routes of interest.  [Check out the web app](https://egcvjidpswxzp7p3ictpax.streamlit.app/){target="_blank"}
+
+Made using: Python, API requests, Github Actions, Google Big Query
+:::
+
+::: {.column width="2%"}
+:::
+
+::: {.column width="43%"}
+![](images/flights.jpeg)
+:::
+:::

@@ -1,0 +1,39 @@
+---
+title: "Rafael Belokurows"
+image: /images/data_pro.png
+about:
+  template: jolla
+  image-shape: rectangle
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/rafabelo
+    - icon: github
+      text: Github
+      href: https://github.com/rafabelokurows
+    - icon: envelope
+      text: Contact me
+      href: mailto:rafabelokurows@gmail.com
+---
+
+## About me
+
+Hi, I'm Rafael Belokurows, welcome to my webpage/portfolio/resume/blog. I'm currently working in Analytics/Data Science at Kantar Worldpanel. When not innovating on data platforms, I enjoy reading, biking and traveling.
+
+## Areas of interest
+
+🛒 Consumer trends, Churn prevention, Customer Segmentation\
+📊 Product usability metrics, A/B tests\
+💹 Time Series Analysis and Forecasting\
+🌎 Geographical Models, Transport and Urban Planning\
+🌲 Environment, Climate Change, and Sustainability\
+![little robot indicating interest in automating data pipelines](https://img.icons8.com/plasticine/38/bot.png){alt="little robot indicating interest in automating data pipelines" width="30"} Web scraping and process automation\
+🏈 Football, Baseball, Soccer
+
+## Experience
+
+Kantar Worldpanel \| Analytics/Data Science \| April 2022 - present
+
+## Education
+
+Universidade do Porto \| Porto, Portugal Msc in Data Science \| Sep 2021

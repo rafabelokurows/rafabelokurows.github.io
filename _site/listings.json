@@ -1,0 +1,30 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/post-with-code/index.html",
+      "/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/blog_posts/post-with-code/index.html",
+      "/blog_posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/post_with_plot/index.html",
+      "/projects/post-with-code/index.html",
+      "/projects/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/data-viz.html",
+    "items": [
+      "/data_viz/post-with-code/index.html"
+    ]
+  }
+]

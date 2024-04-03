@@ -1,0 +1,12 @@
+---
+title: "Welcome To My Blog"
+author: "Rafael Belokurows"
+date: "2024-04-03"
+categories: [news]
+---
+
+This is the first post in my soon-to-be full of posts Quarto blog. Welcome!
+
+![](thumbnail.jpg)
+
+I will talk about some of the things in technology that interest me, so keep an eye out for any new stuff.
