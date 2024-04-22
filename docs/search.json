@@ -37,16 +37,16 @@
   {
     "objectID": "blog_posts/post-with-code/index.html",
     "href": "blog_posts/post-with-code/index.html",
-    "title": "Primeiro post blog",
+    "title": "Churn prediction project",
     "section": "",
-    "text": "This is a post with executable code.\n\nCode1 + 1\n\n[1] 2"
+    "text": "This is a post with executable code.\n\n\nCode\nimport pandas as pd\n\ndata = {\n  \"calories\": [420, 380, 390],\n  \"duration\": [50, 40, 45]\n}\n\n#load data into a DataFrame object:\ndf = pd.DataFrame(data)\n\nprint(df);\n\n\n   calories  duration\n0       420        50\n1       380        40\n2       390        45"
   },
   {
     "objectID": "blog.html",
     "href": "blog.html",
     "title": "Blog",
     "section": "",
-    "text": "Welcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nApr 3, 2024\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiro post blog\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
+    "text": "Welcome To My Blog\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nApr 3, 2024\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nChurn prediction project\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 29, 2024\n\n\n1 min\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "blog_posts/welcome/index.html",
@@ -74,42 +74,42 @@
     "href": "projects.html",
     "title": "Rafael Belokurows",
     "section": "",
-    "text": "Streamlit app that allows the user to load their own time series CSV file and that gives a quick overview of time series features, perform statistical checks and produce short-term forecasts Check out the web app\nMade with: Python, Streamlit, Prophet, and several time series analysis libraries"
+    "text": "Streamlit app that allows the user to load their own time series CSV file and that gives a quick overview of time series features, perform statistical checks and produce short-term forecasts.\nLive Web App\nMade with: Python, Streamlit, Prophet, and several time series analysis libraries"
   },
   {
     "objectID": "projects.html#time-series-explorer-web-app",
     "href": "projects.html#time-series-explorer-web-app",
     "title": "Rafael Belokurows",
     "section": "",
-    "text": "Streamlit app that allows the user to load their own time series CSV file and that gives a quick overview of time series features, perform statistical checks and produce short-term forecasts Check out the web app\nMade with: Python, Streamlit, Prophet, and several time series analysis libraries"
+    "text": "Streamlit app that allows the user to load their own time series CSV file and that gives a quick overview of time series features, perform statistical checks and produce short-term forecasts.\nLive Web App\nMade with: Python, Streamlit, Prophet, and several time series analysis libraries"
   },
   {
     "objectID": "projects.html#porto-street-names-gender-gap",
     "href": "projects.html#porto-street-names-gender-gap",
     "title": "Rafael Belokurows",
     "section": "Porto Street Names Gender Gap",
-    "text": "Porto Street Names Gender Gap\n\n\n\n\n\n\nMost cities have a long-standing gender bias towards men when naming streets, squares, gardens, and other public places. While there is a somewhat recent trend to include more women when defining city names, most street names are well-established and hard to change. With this in mind, I analyzed how bad is the gender bias where I live: Porto, Portugal. Check out how\nMade with: R, leaflet, openstreetmaps data"
+    "text": "Porto Street Names Gender Gap\n\n\n\n\n\n\nMost cities have a long-standing gender bias towards men when naming streets, squares, gardens, and other public places. While there is a somewhat recent trend to include more women when defining city names, most street names are well-established and hard to change. With this in mind, I analyzed how bad is the gender bias where I live: Porto, Portugal.\nGithub Repo\nMade with: R, leaflet, openstreetmaps data"
   },
   {
     "objectID": "projects.html#flight-explorer",
     "href": "projects.html#flight-explorer",
     "title": "Rafael Belokurows",
     "section": "Flight Explorer",
-    "text": "Flight Explorer\n\n\nAutomated data pipeline that collects daily prices on plane tickets and send e-mail alerts whenever price drops below certain threshold in routes of interest. Check out the web app\nMade using: Python, API requests, Github Actions, Google Big Query"
+    "text": "Flight Explorer\n\n\nAutomated data pipeline that collects daily prices on plane tickets and send e-mail alerts whenever price drops below certain threshold in routes of interest.\nLive Web app\nMade using: Python, API requests, Github Actions, Google Big Query"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Rafael Belokurows",
     "section": "",
-    "text": "Hi, I’m Rafael Belokurows, welcome to my webpage/portfolio/resume/blog. I’m currently working in Analytics/Data Science at Kantar Worldpanel. When not innovating on data platforms, I enjoy reading, biking and traveling."
+    "text": "Hi, I’m Rafael Belokurows, welcome to my webpage. I’m currently working in Analytics/Data Science at Kantar Worldpanel Portugal. When not innovating and providing great solutions on data platforms, I enjoy reading, biking and traveling.\nTo see some work examples, check out:\nResume\nData projects\nBlog\nData visualizations"
   },
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
     "title": "Rafael Belokurows",
     "section": "",
-    "text": "Hi, I’m Rafael Belokurows, welcome to my webpage/portfolio/resume/blog. I’m currently working in Analytics/Data Science at Kantar Worldpanel. When not innovating on data platforms, I enjoy reading, biking and traveling."
+    "text": "Hi, I’m Rafael Belokurows, welcome to my webpage. I’m currently working in Analytics/Data Science at Kantar Worldpanel Portugal. When not innovating and providing great solutions on data platforms, I enjoy reading, biking and traveling.\nTo see some work examples, check out:\nResume\nData projects\nBlog\nData visualizations"
   },
   {
     "objectID": "index.html#areas-of-interest",
@@ -138,5 +138,19 @@
     "title": "Data Visualizations",
     "section": "",
     "text": "#TidyTuesday is a weekly data project aimed at the R ecosystem. This project was borne out of the R4DS Online Learning Community and the R for Data Science textbook. Emphasis is placed on understanding how to summarize and arrange data to make meaningful charts with ggplot2, tidyr, dplyr, and other tools in the tidyverse ecosystem. However, any code-based methodology is welcome.\nWhile I regularly participate in weekly Tidy Tuesday, these posts highlight my favorite submissions and the corresponding code.\n\n\n\n\n\n\nTip\n\n\n\nYou can find my github code repository for Tidy Tuesday submissions here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPrimeiro post blog\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\nRafael Belokurows\n\n\nMar 29, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects.html#flight-explorer-1",
+    "href": "projects.html#flight-explorer-1",
+    "title": "Rafael Belokurows",
+    "section": "Flight Explorer",
+    "text": "Flight Explorer\n\n\n\n\nFully automated Quarto report of Portuguese Economy and Tourism indicators. Programed on Git Hub Actions and hosted on GitHub Pages, it automatically retrieves data from Portugues official statistics sources and compare latest data with historical results to give the user a quick overview of the situation of the economy and tourism in Portugal. Live Website\nMade with: R, leaflet, openstreetmaps data"
+  },
+  {
+    "objectID": "projects.html#portugal-automated-kpi-report",
+    "href": "projects.html#portugal-automated-kpi-report",
+    "title": "Rafael Belokurows",
+    "section": "Portugal automated KPI Report",
+    "text": "Portugal automated KPI Report\n\n\n\n\n\n\nFully automated Quarto report of Portuguese Economy and Tourism indicators. Programed on Git Hub Actions and hosted on GitHub Pages, it automatically retrieves data from Portugues official statistics sources and compare latest data with historical results to give the user a quick overview of the situation of the economy and tourism in Portugal. Live Website\nGithub Repo"
   }
 ]

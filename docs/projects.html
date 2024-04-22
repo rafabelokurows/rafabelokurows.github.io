@@ -146,6 +146,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#time-series-explorer-web-app" id="toc-time-series-explorer-web-app" class="nav-link active" data-scroll-target="#time-series-explorer-web-app">Time Series Explorer Web App</a></li>
   <li><a href="#porto-street-names-gender-gap" id="toc-porto-street-names-gender-gap" class="nav-link" data-scroll-target="#porto-street-names-gender-gap">Porto Street Names Gender Gap</a></li>
   <li><a href="#flight-explorer" id="toc-flight-explorer" class="nav-link" data-scroll-target="#flight-explorer">Flight Explorer</a></li>
+  <li><a href="#portugal-automated-kpi-report" id="toc-portugal-automated-kpi-report" class="nav-link" data-scroll-target="#portugal-automated-kpi-report">Portugal automated KPI Report</a></li>
   </ul>
 </nav>
     </div>
@@ -171,7 +172,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="time-series-explorer-web-app">Time Series Explorer Web App</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p>Streamlit app that allows the user to load their own time series CSV file and that gives a quick overview of time series features, perform statistical checks and produce short-term forecasts <a href="https://egcvjidpswxzp7p3ictpax.streamlit.app/" target="_blank">Check out the web app</a></p>
+<p>Streamlit app that allows the user to load their own time series CSV file and that gives a quick overview of time series features, perform statistical checks and produce short-term forecasts.<br>
+<a href="https://egcvjidpswxzp7p3ictpax.streamlit.app/" target="_blank">Live Web App</a></p>
 <p>Made with: Python, Streamlit, Prophet, and several time series analysis libraries</p>
 </div><div class="column" style="width:2%;">
 
@@ -188,7 +190,8 @@ ul.task-list li input[type="checkbox"] {
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:50%;">
-<p>Most cities have a long-standing gender bias towards men when naming streets, squares, gardens, and other public places. While there is a somewhat recent trend to include more women when defining city names, most street names are well-established and hard to change. With this in mind, I analyzed how bad is the gender bias where I live: Porto, Portugal. <a href="https://github.com/rafabelokurows/porto-street-gender-bias" target="_blank">Check out how</a></p>
+<p>Most cities have a long-standing gender bias towards men when naming streets, squares, gardens, and other public places. While there is a somewhat recent trend to include more women when defining city names, most street names are well-established and hard to change. With this in mind, I analyzed how bad is the gender bias where I live: Porto, Portugal.<br>
+<a href="https://github.com/rafabelokurows/porto-street-gender-bias" target="_blank">Github Repo</a></p>
 <p>Made with: R, leaflet, openstreetmaps data</p>
 </div>
 </div>
@@ -197,12 +200,26 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="flight-explorer">Flight Explorer</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
-<p>Automated data pipeline that collects daily prices on plane tickets and send e-mail alerts whenever price drops below certain threshold in routes of interest. <a href="https://egcvjidpswxzp7p3ictpax.streamlit.app/" target="_blank">Check out the web app</a></p>
+<p>Automated data pipeline that collects daily prices on plane tickets and send e-mail alerts whenever price drops below certain threshold in routes of interest.<br>
+<a href="https://egcvjidpswxzp7p3ictpax.streamlit.app/" target="_blank">Live Web app</a></p>
 <p>Made using: Python, API requests, Github Actions, Google Big Query</p>
 </div><div class="column" style="width:2%;">
 
 </div><div class="column" style="width:43%;">
 <p><img src="images/flights.jpeg" class="img-fluid"></p>
+</div>
+</div>
+</section>
+<section id="portugal-automated-kpi-report" class="level2">
+<h2 class="anchored" data-anchor-id="portugal-automated-kpi-report">Portugal automated KPI Report</h2>
+<div class="columns">
+<div class="column" style="width:48%;">
+<p><img src="images/portugal_kpi_report.png" class="img-fluid"></p>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:50%;">
+<p>Fully automated Quarto report of Portuguese Economy and Tourism indicators. Programed on Git Hub Actions and hosted on GitHub Pages, it automatically retrieves data from Portugues official statistics sources and compare latest data with historical results to give the user a quick overview of the situation of the economy and tourism in Portugal. <a href="https://rafabelokurows.github.io/portugal-kpi-watcher/" target="_blank">Live Website</a><br>
+<a href="https://github.com/rafabelokurows/portugal-kpi-watcher/" target="_blank">Github Repo</a></p>
 </div>
 </div>
 
