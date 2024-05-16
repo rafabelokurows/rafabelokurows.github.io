@@ -9,6 +9,7 @@
     "listing": "/blog.html",
     "items": [
       "/blog_posts/r_tip_2/weather_data_r.html",
+      "/blog_posts/r_tip_2_/r_tip_2_streaks.html",
       "/blog_posts/welcome/index.html",
       "/blog_posts/post-with-code/index.html",
       "/blog_posts/scraping_pdf_tables/scraping_pdf_tables.html"
