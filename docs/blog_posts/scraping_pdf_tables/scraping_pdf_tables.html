@@ -5,8 +5,8 @@
 <meta name="generator" content="quarto-1.4.552">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Rafael Belokurows">
-<meta name="dcterms.date" content="2024-05-10">
-<meta name="description" content="Obtaining data from tables in PDF files">
+<meta name="dcterms.date" content="2024-01-01">
+<meta name="description" content="Under construction">
 <title>Rafael Belokurows - Obtaining data from tables in PDF files</title>
 <style>
 code{white-space: pre-wrap;}
@@ -163,10 +163,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <h1 class="title">Obtaining data from tables in PDF files</h1>
                   <div>
         <div class="description">
-          Obtaining data from tables in PDF files
+          Under construction
         </div>
       </div>
                           <div class="quarto-categories">
+                <div class="quarto-category">under_construction</div>
                 <div class="quarto-category">pdf</div>
                 <div class="quarto-category">ocr</div>
                 <div class="quarto-category">R</div>
@@ -187,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 10, 2024</p>
+        <p class="date">January 1, 2024</p>
       </div>
     </div>
     
@@ -224,14 +225,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </h3>
 <p>When your PDF file contains entirely (or mostly) flowing text, it’s easier to begin with</p>
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/pdftools/">pdftools</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'pdftools' was built under R version 4.3.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Using poppler version 23.08.0</code></pre>
-</div>
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span><span class="op">(</span><span class="st">"http://arxiv.org/pdf/1403.2805.pdf"</span>, <span class="st">"1403.2805.pdf"</span>, mode <span class="op">=</span> <span class="st">"wb"</span><span class="op">)</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/pdftools/">pdftools</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/download.file.html">download.file</a></span><span class="op">(</span><span class="st">"http://arxiv.org/pdf/1403.2805.pdf"</span>, <span class="st">"1403.2805.pdf"</span>, mode <span class="op">=</span> <span class="st">"wb"</span><span class="op">)</span></span>
 <span><span class="va">txt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/pdftools/man/pdftools.html">pdf_text</a></span><span class="op">(</span><span class="st">"1403.2805.pdf"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># first page text</span></span>
@@ -280,7 +275,7 @@ arXiv:1403.2805v1 [stat.CO] 12 Mar 2014
 
                                                                                                  1</code></pre>
 </div>
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># second page text</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># second page text</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">txt</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details><div class="cell-output cell-output-stdout">
 <pre><code>JSON with R. We refer to Nolan and Temple Lang (2014) for a comprehensive introduction, or one of the
@@ -340,7 +335,7 @@ fields. This case makes the behavior of parsers ambiguous, because the JSON arra
 <p>OCR tools have evolved pretty well in the last years, especially with the evolving popularity of <code>tesseract</code>, an OCR engine with interfaces in Python, R and many other programming languages.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <p>You don’t even need to an image format, you can read in directly from a PDF file to try to perform the OCR:</p>
 <div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/tesseract/">tesseract</a></span><span class="op">)</span></span>
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/tesseract/">tesseract</a></span><span class="op">)</span></span>
 <span><span class="co">#ocr_result = ocr()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
@@ -359,16 +354,6 @@ fields. This case makes the behavior of parsers ambiguous, because the JSON arra
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/nlsWjezvsg8" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>Having done all that, now on to the good stuff:</p>
 <p>And one of the best options</p>
-<div class="cell">
-<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>a<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">3</span><span class="op">)</span>,b<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">4</span>,<span class="fl">5</span>,<span class="fl">6</span><span class="op">)</span><span class="op">)</span> <span class="co">#there you go</span></span>
-<span><span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details><div class="cell-output cell-output-stdout">
-<pre><code>  a b
-1 1 4
-2 2 5
-3 3 6</code></pre>
-</div>
-</div>
 <p>This is the first of a series of tips to come, stay tuned for more!</p>
 
 
@@ -927,6 +912,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
+</script><script src="https://utteranc.es/client.js" repo="rafabelokurows/rafabelokurows.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer"><div class="nav-footer">

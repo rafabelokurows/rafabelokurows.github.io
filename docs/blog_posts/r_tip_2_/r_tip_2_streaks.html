@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.552">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Rafael Belokurows">
-<meta name="dcterms.date" content="2024-01-01">
-
-<title>Rafael Belokurows - Churn prediction project</title>
+<meta name="dcterms.date" content="2024-05-15">
+<title>Rafael Belokurows - R tip #2: Working with streaks in R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,7 +55,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -76,8 +72,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
@@ -102,18 +97,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="../../styles.css">
+}</script><link rel="stylesheet" href="../../styles.css">
 </head>
-
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
-      <div class="navbar-container container-fluid">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Rafael Belokurows</span>
@@ -125,7 +114,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
+<li class="nav-item">
     <a class="nav-link" href="../../index.html"> <i class="bi bi-house-door-fill" role="img">
 </i> 
 <span class="menu-text">Home</span></a>
@@ -151,8 +140,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Data Viz</span></a>
   </li>  
 </ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
+<ul class="navbar-nav navbar-nav-scroll ms-auto">
+<li class="nav-item compact">
     <a class="nav-link" href="https://github.com/rafabelokurows"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
@@ -163,22 +152,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text"></span></a>
   </li>  
 </ul>
-          </div> <!-- /navcollapse -->
+</div> <!-- /navcollapse -->
           <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default page-columns page-full"><div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Churn prediction project</h1>
+      <h1 class="title">R tip #2: Working with streaks in R</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">news</div>
-                <div class="quarto-category">code</div>
-                <div class="quarto-category">analysis</div>
+                <div class="quarto-category">tips</div>
+                <div class="quarto-category">R</div>
+                <div class="quarto-category">programming</div>
+                <div class="quarto-category">RStudio</div>
               </div>
                   </div>
   </div>
@@ -196,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 1, 2024</p>
+        <p class="date">May 15, 2024</p>
       </div>
     </div>
     
@@ -211,40 +197,64 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-
-
-<p>This post is under construction.</p>
-<div id="25a1c2a2" class="cell" data-execution_count="1">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> {</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"calories"</span>: [<span class="dv">420</span>, <span class="dv">380</span>, <span class="dv">390</span>],</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"duration"</span>: [<span class="dv">50</span>, <span class="dv">40</span>, <span class="dv">45</span>]</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#load data into a DataFrame object:</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><p>Hey, data people!</p>
+<p>Something I’ve come across quite a few times when working with different types of data is detecting patterns of consecutive behavior. This has many applications in practice, such as to determine:</p>
+<ul>
+<li>String of occurrences of binomially-distributed phenomenon, such as coin toss, but also basically anything that has Yes/No, Pass/Fail, 1/0 possible results</li>
+</ul>
+<!-- --><ul>
+<li><p>How many weeks a row a user is using a feature of your website/product</p></li>
+<li><p>Hitting streaks in Baseball or streaks of 3-point shoots in Basketball</p></li>
+</ul>
+<p>For some cases, you also may want just the opposite: finding breaks in consecutive behavior, and that follows basically the same logic with just a little tweaks.</p>
+<p>I’ll like to think that everyone working in Data should have one “get-things-done-quickly tool”, be it Python, SQL, R, or Excel if that’s your thing. Some tool you can depend on when you need something done as quickly and effectively as possible. For me, that’s R and the <code>tidyverse</code>, so that’s what I’m working with here.</p>
+<p>Let’s see how to determine and label a streak of values using R and the tidyverse suite of packages.</p>
+<p>We’re gonna work with</p>
+<p>Here’s the full code for this particular solution. If you know what you’re doing, you can just copy and paste this and change it to your heart’s desire. And don’t worry, if you want some more insight, I’ll explain each part in more detail.</p>
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># df %&gt;% mutate(lagged = dplyr::lag(corte_cestas)) %&gt;% </span></span>
+<span><span class="co">#       mutate(start = (corte_cestas != lagged)) %&gt;% mutate(start = if_else(is.na(start),T,start))%&gt;%</span></span>
+<span><span class="co">#       mutate(streak_id = cumsum(start)) %&gt;%</span></span>
+<span><span class="co">#       group_by(streak_id) %&gt;% mutate(streak = row_number()) %&gt;% ungroup() %&gt;%</span></span>
+<span><span class="co">#       mutate(streak_cestas = if_else(corte_cestas ==0,0,streak)) %&gt;% select(-c(lagged,start,streak_id,streak))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>   calories  duration
-0       420        50
-1       380        40
-2       390        45</code></pre>
 </div>
+<p>and also connect everything at the end of the post, so stay tuned for the full code.</p>
+<p>First, we find the lag of the value for the current row.</p>
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># df_with_lag = df %&gt;% </span></span>
+<span><span class="co">#   mutate(lagged = dplyr::lag(value)) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># is_value_lag_equal = df_with_lag %&gt;%</span></span>
+<span><span class="co">#   mutate(start = (value != lagged)) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># fixed_start = is_value_lag_equal %&gt;% </span></span>
+<span><span class="co">#   mutate(start = if_else(is.na(start),T,start)) </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell">
+<details open="" class="code-fold"><summary>Code</summary><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># fixed_start</span></span>
+<span><span class="co">#   mutate(streak_id = cumsum(start)) %&gt;%</span></span>
+<span><span class="co">#   group_by(streak_id) %&gt;% </span></span>
+<span><span class="co">#   mutate(streak = row_number()) %&gt;% </span></span>
+<span><span class="co">#   ungroup() %&gt;%</span></span>
+<span><span class="co">#   mutate(streak_cestas = if_else(corte_cestas ==0,0,streak)) %&gt;% </span></span>
+<span><span class="co">#   select(-c(lagged,start,streak_id,streak))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p><img src="last_value.gif" class="img-fluid" width="300"></p>
+<p>You may ask me: Ok, but how will that save me time? Can’t I press the up arrow ⬆ and run the same code again? Yeah, sure, but what if you just ran a complex operation on a dataframe with many thousands of rows (or more)?<br>
+Using <code>.Last.value</code> lets you reuse the same data, this way you won’t waste time or computing power (which in a hosted environment could cost you some money).</p>
+<p>This is the first of a series of tips to come, stay tuned for more!</p>
+<!-- ![](thumbnail.jpg) -->
 
 
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -796,12 +806,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<script src="https://utteranc.es/client.js" repo="rafabelokurows/rafabelokurows.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script><script src="https://utteranc.es/client.js" repo="rafabelokurows/rafabelokurows.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>Made with <a href="https://quarto.org/">Quarto</a></p>
 </div>   
@@ -813,8 +821,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
